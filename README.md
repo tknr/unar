@@ -9,3 +9,15 @@
 * Version 2.0 uses an archive-handling library built largely from scratch in Objective-C, which makes adding support for new formats and algorithms very easy.
 * Uses libxad (http://sourceforge.net/projects/libxad/) for older and more obscure formats. This is an old Amiga library for handling unpacking of archives.
 * The unarchiving engine itself is multi-platform, and command-line tools exist for Linux, Windows and other OSes.
+* you will need to find and install the required third-party libraries that the XADMaster library depends on (GNUstep, zlib, libbzip2, OpenSSL, and ICU). How to do that depends on which distribution you are using. On Ubuntu, the following should work:
+
+```
+
+sudo apt-get install build-essential libgnustep-base-dev libz-dev libbz2-dev libssl-dev libicu-dev
+
+cd XADMaster
+
+make -f Makefile.linux
+
+
+```
